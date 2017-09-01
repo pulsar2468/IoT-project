@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster-src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_bc273633c478485ba1471424ba1435d0 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_bc273633c478485ba1471424ba1435d0" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var southWest = L.latLng(-90, -180);
+                var northEast = L.latLng(90, 180);
+                var bounds = L.latLngBounds(southWest, northEast);
+            
+
+            var map_bc273633c478485ba1471424ba1435d0 = L.map(
+                                  'map_bc273633c478485ba1471424ba1435d0',
+                                  {center: [37.57,13.92],
+                                  zoom: 8,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_837c4c63561d41568615b159bdc793fc = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    continuousWorld: false,
+                    noWrap: false,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_bc273633c478485ba1471424ba1435d0);
+
+        
+    
+            var feature_group_1528e08607e6486ebddd400b1d83a6ad = L.featureGroup(
+                ).addTo(map_bc273633c478485ba1471424ba1435d0);
+        
+    
+
+            var circle_marker_6b934d2e22bc44a8adfd4c106e07cd75 = L.circleMarker(
+                [37.796638,12.43518],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_5d322f374c3549b2aa48bc7e87d663c4 = L.popup({maxWidth: '300'});
+
+            
+                var html_8d10377cc8e1427e88d7d1ccb2205709 = $('<div id="html_8d10377cc8e1427e88d7d1ccb2205709" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Marsala<br>Lat: 37.796638<br>Lon: 12.43518<br>Temp: 16<br>Detection_Time: 2017-06-19 06:03:01<br>Humidity: 87.00<br>Pressure: 1018.00<br>Wind_deg: 100.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_5d322f374c3549b2aa48bc7e87d663c4.setContent(html_8d10377cc8e1427e88d7d1ccb2205709);
+            
+
+            circle_marker_6b934d2e22bc44a8adfd4c106e07cd75.bindPopup(popup_5d322f374c3549b2aa48bc7e87d663c4);
+
+            
+        
+    
+
+            var circle_marker_b1adaaa4143c4af4bc804b343d266691 = L.circleMarker(
+                [37.664139,12.58804],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_bdb7c3d9989d427b913a27b5ad09e2ee = L.popup({maxWidth: '300'});
+
+            
+                var html_f4d09328c9744ec188dac578a352f93b = $('<div id="html_f4d09328c9744ec188dac578a352f93b" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Mazara del Vallo<br>Lat: 37.664139<br>Lon: 12.58804<br>Temp: 16<br>Detection_Time: 2017-06-19 06:02:29<br>Humidity: 87.00<br>Pressure: 1018.00<br>Wind_deg: 100.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_bdb7c3d9989d427b913a27b5ad09e2ee.setContent(html_f4d09328c9744ec188dac578a352f93b);
+            
+
+            circle_marker_b1adaaa4143c4af4bc804b343d266691.bindPopup(popup_bdb7c3d9989d427b913a27b5ad09e2ee);
+
+            
+        
+    
+
+            var circle_marker_624b61746f2947adb65ff2d136205c11 = L.circleMarker(
+                [38.015839,12.51077],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_2f32a2258ad04fde8477f081c6ef4de1 = L.popup({maxWidth: '300'});
+
+            
+                var html_07511832d27542ba8b8528bb95adc6b5 = $('<div id="html_07511832d27542ba8b8528bb95adc6b5" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Trapani<br>Lat: 38.015839<br>Lon: 12.51077<br>Temp: 19.52<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 87.00<br>Pressure: 1018.00<br>Wind_deg: 100.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_2f32a2258ad04fde8477f081c6ef4de1.setContent(html_07511832d27542ba8b8528bb95adc6b5);
+            
+
+            circle_marker_624b61746f2947adb65ff2d136205c11.bindPopup(popup_2f32a2258ad04fde8477f081c6ef4de1);
+
+            
+        
+    
+
+            var circle_marker_4212492ee32c47f6ad19369c63e4cb0c = L.circleMarker(
+                [37.68264,12.79164],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_ca8774cfbb38407a979cefcfccac0ce6 = L.popup({maxWidth: '300'});
+
+            
+                var html_1f4b175e7c7748af8fbe23de764be3bc = $('<div id="html_1f4b175e7c7748af8fbe23de764be3bc" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Castelvetrano<br>Lat: 37.68264<br>Lon: 12.79164<br>Temp: 19.31<br>Detection_Time: 2017-06-19 06:03:00<br>Humidity: 69.00<br>Pressure: 1018.00<br>Wind_deg: 40.00<br>Wind_speed: 5.10</font></div>')[0];
+                popup_ca8774cfbb38407a979cefcfccac0ce6.setContent(html_1f4b175e7c7748af8fbe23de764be3bc);
+            
+
+            circle_marker_4212492ee32c47f6ad19369c63e4cb0c.bindPopup(popup_ca8774cfbb38407a979cefcfccac0ce6);
+
+            
+        
+    
+
+            var circle_marker_0a8d1886330440efa5e12c60547afaea = L.circleMarker(
+                [37.506931,13.08399],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_3f55eea066604b879cb16df94a58cb1c = L.popup({maxWidth: '300'});
+
+            
+                var html_3616cce8cb48444cad2ae74b80fe87c5 = $('<div id="html_3616cce8cb48444cad2ae74b80fe87c5" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Sciacca<br>Lat: 37.506931<br>Lon: 13.08399<br>Temp: 16<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 87.00<br>Pressure: 1018.00<br>Wind_deg: 100.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_3f55eea066604b879cb16df94a58cb1c.setContent(html_3616cce8cb48444cad2ae74b80fe87c5);
+            
+
+            circle_marker_0a8d1886330440efa5e12c60547afaea.bindPopup(popup_3f55eea066604b879cb16df94a58cb1c);
+
+            
+        
+    
+
+            var circle_marker_b9b6ea4dc2744a09bf50e807afe488d4 = L.circleMarker(
+                [37.49844,13.26415],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_969427c48273442bbbe3398ffba16a91 = L.popup({maxWidth: '300'});
+
+            
+                var html_340bbf70850c4a5aa781da87e93bce8a = $('<div id="html_340bbf70850c4a5aa781da87e93bce8a" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Ribera<br>Lat: 37.49844<br>Lon: 13.26415<br>Temp: 22.69<br>Detection_Time: 2017-06-19 06:02:29<br>Humidity: 100.00<br>Pressure: 1028.83<br>Wind_deg: 73.50<br>Wind_speed: 2.82</font></div>')[0];
+                popup_969427c48273442bbbe3398ffba16a91.setContent(html_340bbf70850c4a5aa781da87e93bce8a);
+            
+
+            circle_marker_b9b6ea4dc2744a09bf50e807afe488d4.bindPopup(popup_969427c48273442bbbe3398ffba16a91);
+
+            
+        
+    
+
+            var circle_marker_c03ffa39182e48a492a39b15cd88bf15 = L.circleMarker(
+                [37.192638,13.76496],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_b2e018d698c349cc8109cbc03e8e97e1 = L.popup({maxWidth: '300'});
+
+            
+                var html_e1af46e8add0484884291ca25f30100f = $('<div id="html_e1af46e8add0484884291ca25f30100f" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Palma di Montechiaro<br>Lat: 37.192638<br>Lon: 13.76496<br>Temp: 20.29<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 86.00<br>Pressure: 1012.62<br>Wind_deg: 57.00<br>Wind_speed: 1.97</font></div>')[0];
+                popup_b2e018d698c349cc8109cbc03e8e97e1.setContent(html_e1af46e8add0484884291ca25f30100f);
+            
+
+            circle_marker_c03ffa39182e48a492a39b15cd88bf15.bindPopup(popup_b2e018d698c349cc8109cbc03e8e97e1);
+
+            
+        
+    
+
+            var circle_marker_6dcd0eab70ec41488e9fc06aa52c53e8 = L.circleMarker(
+                [37.10714,13.94607],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_731d5cdb96c34669b522c2d6778ec331 = L.popup({maxWidth: '300'});
+
+            
+                var html_18a699c8656546779c2294c842b04222 = $('<div id="html_18a699c8656546779c2294c842b04222" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Licata<br>Lat: 37.10714<br>Lon: 13.94607<br>Temp: 18<br>Detection_Time: 2017-06-19 06:01:22<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_731d5cdb96c34669b522c2d6778ec331.setContent(html_18a699c8656546779c2294c842b04222);
+            
+
+            circle_marker_6dcd0eab70ec41488e9fc06aa52c53e8.bindPopup(popup_731d5cdb96c34669b522c2d6778ec331);
+
+            
+        
+    
+
+            var circle_marker_46b145ae171042339db2b4e7c3588f71 = L.circleMarker(
+                [37.320839,13.58876],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_f497fea06b2447a1bb5509def316277e = L.popup({maxWidth: '300'});
+
+            
+                var html_20b3b5784e334079aa086fff01c3658c = $('<div id="html_20b3b5784e334079aa086fff01c3658c" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Agrigento<br>Lat: 37.320839<br>Lon: 13.58876<br>Temp: 20.29<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 86.00<br>Pressure: 1012.62<br>Wind_deg: 57.00<br>Wind_speed: 1.97</font></div>')[0];
+                popup_f497fea06b2447a1bb5509def316277e.setContent(html_20b3b5784e334079aa086fff01c3658c);
+            
+
+            circle_marker_46b145ae171042339db2b4e7c3588f71.bindPopup(popup_f497fea06b2447a1bb5509def316277e);
+
+            
+        
+    
+
+            var circle_marker_3d9675abf17040ab971421e3f26e82e6 = L.circleMarker(
+                [37.35894,13.85036],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_e023c6bd077047729524660d2d277ca7 = L.popup({maxWidth: '300'});
+
+            
+                var html_58010a46c38d4c25a202f86e9ec49058 = $('<div id="html_58010a46c38d4c25a202f86e9ec49058" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Canicatti<br>Lat: 37.35894<br>Lon: 13.85036<br>Temp: 20.29<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 86.00<br>Pressure: 1012.62<br>Wind_deg: 57.00<br>Wind_speed: 1.97</font></div>')[0];
+                popup_e023c6bd077047729524660d2d277ca7.setContent(html_58010a46c38d4c25a202f86e9ec49058);
+            
+
+            circle_marker_3d9675abf17040ab971421e3f26e82e6.bindPopup(popup_e023c6bd077047729524660d2d277ca7);
+
+            
+        
+    
+
+            var circle_marker_f4982614432342e3bf8ed8c56d2f2626 = L.circleMarker(
+                [37.48774,14.04497],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_68346d65671e4fe48ec3b13e736ea677 = L.popup({maxWidth: '300'});
+
+            
+                var html_ddca731ee30344b0a35e9708c435daee = $('<div id="html_ddca731ee30344b0a35e9708c435daee" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Caltanissetta<br>Lat: 37.48774<br>Lon: 14.04497<br>Temp: 20.29<br>Detection_Time: 2017-06-19 06:02:35<br>Humidity: 86.00<br>Pressure: 1012.62<br>Wind_deg: 57.00<br>Wind_speed: 1.97</font></div>')[0];
+                popup_68346d65671e4fe48ec3b13e736ea677.setContent(html_ddca731ee30344b0a35e9708c435daee);
+            
+
+            circle_marker_f4982614432342e3bf8ed8c56d2f2626.bindPopup(popup_68346d65671e4fe48ec3b13e736ea677);
+
+            
+        
+    
+
+            var circle_marker_0e495f0df0134259a448d62d8ef333ab = L.circleMarker(
+                [37.998348,12.95654],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_bf31f5e47d294d5b807b7f8e728c35ce = L.popup({maxWidth: '300'});
+
+            
+                var html_a3ee63bb4a1343e8a8bd304cfe863f03 = $('<div id="html_a3ee63bb4a1343e8a8bd304cfe863f03" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Alcamo<br>Lat: 37.998348<br>Lon: 12.95654<br>Temp: 18.89<br>Detection_Time: 2017-06-19 06:01:22<br>Humidity: 69.00<br>Pressure: 1018.00<br>Wind_deg: 40.00<br>Wind_speed: 5.10</font></div>')[0];
+                popup_bf31f5e47d294d5b807b7f8e728c35ce.setContent(html_a3ee63bb4a1343e8a8bd304cfe863f03);
+            
+
+            circle_marker_0e495f0df0134259a448d62d8ef333ab.bindPopup(popup_bf31f5e47d294d5b807b7f8e728c35ce);
+
+            
+        
+    
+
+            var circle_marker_971a6c01c19d4db0b6c808509b514ab6 = L.circleMarker(
+                [38.080051,13.28854],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_7a7c044d9f914077a081f8e28b1a2dd8 = L.popup({maxWidth: '300'});
+
+            
+                var html_df36b24ffc0f42e8aa1394309ac45f62 = $('<div id="html_df36b24ffc0f42e8aa1394309ac45f62" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Monreale<br>Lat: 38.080051<br>Lon: 13.28854<br>Temp: 23<br>Detection_Time: 2017-06-19 06:01:22<br>Humidity: 69.00<br>Pressure: 1018.00<br>Wind_deg: 40.00<br>Wind_speed: 5.10</font></div>')[0];
+                popup_7a7c044d9f914077a081f8e28b1a2dd8.setContent(html_df36b24ffc0f42e8aa1394309ac45f62);
+            
+
+            circle_marker_971a6c01c19d4db0b6c808509b514ab6.bindPopup(popup_7a7c044d9f914077a081f8e28b1a2dd8);
+
+            
+        
+    
+
+            var circle_marker_5dacf28234b94e8f9e342ac5a14e3545 = L.circleMarker(
+                [38.115822,13.35976],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_e4a510a431d24541944cc38f95dbdf38 = L.popup({maxWidth: '300'});
+
+            
+                var html_4b30451e67d44872928ac6bdc2063f25 = $('<div id="html_4b30451e67d44872928ac6bdc2063f25" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Palermo<br>Lat: 38.115822<br>Lon: 13.35976<br>Temp: 23<br>Detection_Time: 2017-06-19 06:02:31<br>Humidity: 69.00<br>Pressure: 1018.00<br>Wind_deg: 40.00<br>Wind_speed: 5.10</font></div>')[0];
+                popup_e4a510a431d24541944cc38f95dbdf38.setContent(html_4b30451e67d44872928ac6bdc2063f25);
+            
+
+            circle_marker_5dacf28234b94e8f9e342ac5a14e3545.bindPopup(popup_e4a510a431d24541944cc38f95dbdf38);
+
+            
+        
+    
+
+            var circle_marker_10c031fa67574b54905b7e2851f714cf = L.circleMarker(
+                [37.98365,13.69555],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_9a431bde2954430f81176edfaa393ad4 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1c72e89209343e4b8d5867452bebed7 = $('<div id="html_f1c72e89209343e4b8d5867452bebed7" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Termini Imerese<br>Lat: 37.98365<br>Lon: 13.69555<br>Temp: 23<br>Detection_Time: 2017-06-19 06:03:01<br>Humidity: 69.00<br>Pressure: 1018.00<br>Wind_deg: 40.00<br>Wind_speed: 5.10</font></div>')[0];
+                popup_9a431bde2954430f81176edfaa393ad4.setContent(html_f1c72e89209343e4b8d5867452bebed7);
+            
+
+            circle_marker_10c031fa67574b54905b7e2851f714cf.bindPopup(popup_9a431bde2954430f81176edfaa393ad4);
+
+            
+        
+    
+
+            var circle_marker_cdeee54b30cb4a7f8a7f6753f1e0160f = L.circleMarker(
+                [35.897221,14.46111],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_1be63363442b481da0d614d3e20c50bc = L.popup({maxWidth: '300'});
+
+            
+                var html_40cb7b74c3034ec39fc4b6e5e69cc3b1 = $('<div id="html_40cb7b74c3034ec39fc4b6e5e69cc3b1" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Birkirkara<br>Lat: 35.897221<br>Lon: 14.46111<br>Temp: 23<br>Detection_Time: 2017-06-19 06:01:55<br>Humidity: 64.00<br>Pressure: 1018.00<br>Wind_deg: 60.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_1be63363442b481da0d614d3e20c50bc.setContent(html_40cb7b74c3034ec39fc4b6e5e69cc3b1);
+            
+
+            circle_marker_cdeee54b30cb4a7f8a7f6753f1e0160f.bindPopup(popup_1be63363442b481da0d614d3e20c50bc);
+
+            
+        
+    
+
+            var circle_marker_02c2d7e4fba9432ab7d1ba63d57ce661 = L.circleMarker(
+                [37.080341,14.23068],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_eedca4c07e8d49d4880937bd3742dc28 = L.popup({maxWidth: '300'});
+
+            
+                var html_ecca7e14f7474b82806b2e54e8fa540e = $('<div id="html_ecca7e14f7474b82806b2e54e8fa540e" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Gela<br>Lat: 37.080341<br>Lon: 14.23068<br>Temp: 18<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_eedca4c07e8d49d4880937bd3742dc28.setContent(html_ecca7e14f7474b82806b2e54e8fa540e);
+            
+
+            circle_marker_02c2d7e4fba9432ab7d1ba63d57ce661.bindPopup(popup_eedca4c07e8d49d4880937bd3742dc28);
+
+            
+        
+    
+
+            var circle_marker_cb7f61bfe35142f99b7bffcca62a8209 = L.circleMarker(
+                [37.14864,14.39128],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_e9096f0920754213aa559b8984c25ffd = L.popup({maxWidth: '300'});
+
+            
+                var html_125fad555188431082a51f195ce0414a = $('<div id="html_125fad555188431082a51f195ce0414a" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Niscemi<br>Lat: 37.14864<br>Lon: 14.39128<br>Temp: 19.71<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_e9096f0920754213aa559b8984c25ffd.setContent(html_125fad555188431082a51f195ce0414a);
+            
+
+            circle_marker_cb7f61bfe35142f99b7bffcca62a8209.bindPopup(popup_e9096f0920754213aa559b8984c25ffd);
+
+            
+        
+    
+
+            var circle_marker_fbd82e0a955d40b9bc9425d26fd312cd = L.circleMarker(
+                [37.23682,14.5132],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_8a238b280ffc4cd3afdbb80f30facbea = L.popup({maxWidth: '300'});
+
+            
+                var html_4ee29276bcaf4d4f9eabd0a82f22e75c = $('<div id="html_4ee29276bcaf4d4f9eabd0a82f22e75c" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Caltagirone<br>Lat: 37.23682<br>Lon: 14.5132<br>Temp: 19.68<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_8a238b280ffc4cd3afdbb80f30facbea.setContent(html_4ee29276bcaf4d4f9eabd0a82f22e75c);
+            
+
+            circle_marker_fbd82e0a955d40b9bc9425d26fd312cd.bindPopup(popup_8a238b280ffc4cd3afdbb80f30facbea);
+
+            
+        
+    
+
+            var circle_marker_c71bb17746984759b161c222d4762819 = L.circleMarker(
+                [36.928242,14.71719],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_d2c58712237f43c1bf95edd916fbd115 = L.popup({maxWidth: '300'});
+
+            
+                var html_600de0b6aa284529b02189343b7956c9 = $('<div id="html_600de0b6aa284529b02189343b7956c9" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Ragusa<br>Lat: 36.928242<br>Lon: 14.71719<br>Temp: 19.74<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_d2c58712237f43c1bf95edd916fbd115.setContent(html_600de0b6aa284529b02189343b7956c9);
+            
+
+            circle_marker_c71bb17746984759b161c222d4762819.bindPopup(popup_d2c58712237f43c1bf95edd916fbd115);
+
+            
+        
+    
+
+            var circle_marker_a29b021194094559ae43b949c867a817 = L.circleMarker(
+                [37.385948,14.36717],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_4aea2fad37094d38a383492907471eae = L.popup({maxWidth: '300'});
+
+            
+                var html_87998a733dfd4a78b0a9d84ceb955e90 = $('<div id="html_87998a733dfd4a78b0a9d84ceb955e90" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Piazza Armerina<br>Lat: 37.385948<br>Lon: 14.36717<br>Temp: 19.66<br>Detection_Time: 2017-06-19 06:03:01<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_4aea2fad37094d38a383492907471eae.setContent(html_87998a733dfd4a78b0a9d84ceb955e90);
+            
+
+            circle_marker_a29b021194094559ae43b949c867a817.bindPopup(popup_4aea2fad37094d38a383492907471eae);
+
+            
+        
+    
+
+            var circle_marker_2d7aa92c32974955ba3824094af05f53 = L.circleMarker(
+                [37.558849,14.28917],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_40ade53bf774414893e3eb29ce960474 = L.popup({maxWidth: '300'});
+
+            
+                var html_87115b6238074307b5f194bc3b367994 = $('<div id="html_87115b6238074307b5f194bc3b367994" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Enna<br>Lat: 37.558849<br>Lon: 14.28917<br>Temp: 19.63<br>Detection_Time: 2017-06-19 06:01:56<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_40ade53bf774414893e3eb29ce960474.setContent(html_87115b6238074307b5f194bc3b367994);
+            
+
+            circle_marker_2d7aa92c32974955ba3824094af05f53.bindPopup(popup_40ade53bf774414893e3eb29ce960474);
+
+            
+        
+    
+
+            var circle_marker_c4adb9f96f084f46a4548e57d79e0320 = L.circleMarker(
+                [36.730541,14.84989],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_6f699d3203d843588a1220c2381a6401 = L.popup({maxWidth: '300'});
+
+            
+                var html_895f9b2c26a44e56a19736ae6b53e6e0 = $('<div id="html_895f9b2c26a44e56a19736ae6b53e6e0" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Pozzallo<br>Lat: 36.730541<br>Lon: 14.84989<br>Temp: 18<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_6f699d3203d843588a1220c2381a6401.setContent(html_895f9b2c26a44e56a19736ae6b53e6e0);
+            
+
+            circle_marker_c4adb9f96f084f46a4548e57d79e0320.bindPopup(popup_6f699d3203d843588a1220c2381a6401);
+
+            
+        
+    
+
+            var circle_marker_6dbe3d4032ff45c58bfb51e458a0226e = L.circleMarker(
+                [36.84594,14.77399],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_2183601a5ee544c4b8cad6bc64cec42c = L.popup({maxWidth: '300'});
+
+            
+                var html_2bfe08fc363b4b98a314ecb5f90445ff = $('<div id="html_2bfe08fc363b4b98a314ecb5f90445ff" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Modica<br>Lat: 36.84594<br>Lon: 14.77399<br>Temp: 19.73<br>Detection_Time: 2017-06-19 06:03:01<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_2183601a5ee544c4b8cad6bc64cec42c.setContent(html_2bfe08fc363b4b98a314ecb5f90445ff);
+            
+
+            circle_marker_6dbe3d4032ff45c58bfb51e458a0226e.bindPopup(popup_2183601a5ee544c4b8cad6bc64cec42c);
+
+            
+        
+    
+
+            var circle_marker_68b0287cc3de4c949c93811561da6ff7 = L.circleMarker(
+                [36.718639,15.0907],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_76d674cde8bf4a7ab64d20e7af34b412 = L.popup({maxWidth: '300'});
+
+            
+                var html_35d0c950d1824adc8477c46f80a3eb61 = $('<div id="html_35d0c950d1824adc8477c46f80a3eb61" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Pachino<br>Lat: 36.718639<br>Lon: 15.0907<br>Temp: 18<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_76d674cde8bf4a7ab64d20e7af34b412.setContent(html_35d0c950d1824adc8477c46f80a3eb61);
+            
+
+            circle_marker_68b0287cc3de4c949c93811561da6ff7.bindPopup(popup_76d674cde8bf4a7ab64d20e7af34b412);
+
+            
+        
+    
+
+            var circle_marker_266ec16c40ee413a84620ee994d51f41 = L.circleMarker(
+                [36.824242,14.94779],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_4f1127843da247f694bed728bb091328 = L.popup({maxWidth: '300'});
+
+            
+                var html_cd84e14b84aa41cf960bd06e34f58f54 = $('<div id="html_cd84e14b84aa41cf960bd06e34f58f54" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Rosolini<br>Lat: 36.824242<br>Lon: 14.94779<br>Temp: 19.66<br>Detection_Time: 2017-06-19 06:01:44<br>Humidity: 82.00<br>Pressure: 1018.00<br>Wind_deg: 70.00<br>Wind_speed: 1.00</font></div>')[0];
+                popup_4f1127843da247f694bed728bb091328.setContent(html_cd84e14b84aa41cf960bd06e34f58f54);
+            
+
+            circle_marker_266ec16c40ee413a84620ee994d51f41.bindPopup(popup_4f1127843da247f694bed728bb091328);
+
+            
+        
+    
+
+            var circle_marker_52a91872c8d44cec902d96ca46211911 = L.circleMarker(
+                [36.911339,15.1395],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_c82b41caf11d4444b35d18b033906e8e = L.popup({maxWidth: '300'});
+
+            
+                var html_ff609c8e948d48b9b8b966f95cb6fdca = $('<div id="html_ff609c8e948d48b9b8b966f95cb6fdca" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Avola<br>Lat: 36.911339<br>Lon: 15.1395<br>Temp: 19.67<br>Detection_Time: 2017-06-19 06:01:44<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_c82b41caf11d4444b35d18b033906e8e.setContent(html_ff609c8e948d48b9b8b966f95cb6fdca);
+            
+
+            circle_marker_52a91872c8d44cec902d96ca46211911.bindPopup(popup_c82b41caf11d4444b35d18b033906e8e);
+
+            
+        
+    
+
+            var circle_marker_5c939561925a413db09ebbfe215f1b93 = L.circleMarker(
+                [37.085152,15.273],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_5cf4c251737644fbad83cfe4076cac13 = L.popup({maxWidth: '300'});
+
+            
+                var html_8730989d5794409cb6d7e14f83221ae4 = $('<div id="html_8730989d5794409cb6d7e14f83221ae4" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Siracusa<br>Lat: 37.085152<br>Lon: 15.273<br>Temp: 19.62<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_5cf4c251737644fbad83cfe4076cac13.setContent(html_8730989d5794409cb6d7e14f83221ae4);
+            
+
+            circle_marker_5c939561925a413db09ebbfe215f1b93.bindPopup(popup_5cf4c251737644fbad83cfe4076cac13);
+
+            
+        
+    
+
+            var circle_marker_12015a99003644cf889da6c08bcbf966 = L.circleMarker(
+                [37.236549,15.21969],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_e32adb784e7e4cf88b455404c5d9f6cb = L.popup({maxWidth: '300'});
+
+            
+                var html_1f1792af5168482baf8c4a472293d08a = $('<div id="html_1f1792af5168482baf8c4a472293d08a" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Augusta<br>Lat: 37.236549<br>Lon: 15.21969<br>Temp: 19.6<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_e32adb784e7e4cf88b455404c5d9f6cb.setContent(html_1f1792af5168482baf8c4a472293d08a);
+            
+
+            circle_marker_12015a99003644cf889da6c08bcbf966.bindPopup(popup_e32adb784e7e4cf88b455404c5d9f6cb);
+
+            
+        
+    
+
+            var circle_marker_50be4030dc124ab393ca7a2417f7056f = L.circleMarker(
+                [37.29805,14.84078],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_3f4847328e744682a9614f523993bd63 = L.popup({maxWidth: '300'});
+
+            
+                var html_f7186b8ed9f8456db40a8f6f0d6b4281 = $('<div id="html_f7186b8ed9f8456db40a8f6f0d6b4281" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Scordia<br>Lat: 37.29805<br>Lon: 14.84078<br>Temp: 19.61<br>Detection_Time: 2017-06-19 06:04:57<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_3f4847328e744682a9614f523993bd63.setContent(html_f7186b8ed9f8456db40a8f6f0d6b4281);
+            
+
+            circle_marker_50be4030dc124ab393ca7a2417f7056f.bindPopup(popup_3f4847328e744682a9614f523993bd63);
+
+            
+        
+    
+
+            var circle_marker_16c32c6d7f6e4832a684ce192315fc45 = L.circleMarker(
+                [37.28545,14.99959],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_25fc29e63dc947b88c88924c0880dd73 = L.popup({maxWidth: '300'});
+
+            
+                var html_d315768cd94041c19868e742df057157 = $('<div id="html_d315768cd94041c19868e742df057157" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Lentini<br>Lat: 37.28545<br>Lon: 14.99959<br>Temp: 19.6<br>Detection_Time: 2017-06-19 06:03:00<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_25fc29e63dc947b88c88924c0880dd73.setContent(html_d315768cd94041c19868e742df057157);
+            
+
+            circle_marker_16c32c6d7f6e4832a684ce192315fc45.bindPopup(popup_25fc29e63dc947b88c88924c0880dd73);
+
+            
+        
+    
+
+            var circle_marker_ab721601c0ad47e2a41bbe0cb63eb819 = L.circleMarker(
+                [37.502129,15.08719],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_5b2261b77a574ec3b9672eeee0ef2de0 = L.popup({maxWidth: '300'});
+
+            
+                var html_688fdd6a18b1456abbca65e76cba1810 = $('<div id="html_688fdd6a18b1456abbca65e76cba1810" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Catania<br>Lat: 37.502129<br>Lon: 15.08719<br>Temp: 20.57<br>Detection_Time: 2017-06-19 06:02:31<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_5b2261b77a574ec3b9672eeee0ef2de0.setContent(html_688fdd6a18b1456abbca65e76cba1810);
+            
+
+            circle_marker_ab721601c0ad47e2a41bbe0cb63eb819.bindPopup(popup_5b2261b77a574ec3b9672eeee0ef2de0);
+
+            
+        
+    
+
+            var circle_marker_88b49d4e2ce14cf2bf32347b2de0b0ca = L.circleMarker(
+                [37.661751,14.83478],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_6d46e62b2a9949029d9ae387592280cc = L.popup({maxWidth: '300'});
+
+            
+                var html_9c8e5c3abcf741e8861d7afe28292cbc = $('<div id="html_9c8e5c3abcf741e8861d7afe28292cbc" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Adrano<br>Lat: 37.661751<br>Lon: 14.83478<br>Temp: 20.33<br>Detection_Time: 2017-06-19 06:03:02<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_6d46e62b2a9949029d9ae387592280cc.setContent(html_9c8e5c3abcf741e8861d7afe28292cbc);
+            
+
+            circle_marker_88b49d4e2ce14cf2bf32347b2de0b0ca.bindPopup(popup_6d46e62b2a9949029d9ae387592280cc);
+
+            
+        
+    
+
+            var circle_marker_dde681ffe66c4c6d93df8295aa603ed6 = L.circleMarker(
+                [37.789459,14.83418],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_eccaa88e0e8e4da8a6f45c57293ffbc2 = L.popup({maxWidth: '300'});
+
+            
+                var html_c295f3b0b4124ddba49df3193faf1b1c = $('<div id="html_c295f3b0b4124ddba49df3193faf1b1c" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Bronte<br>Lat: 37.789459<br>Lon: 14.83418<br>Temp: 20.34<br>Detection_Time: 2017-06-19 06:03:01<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_eccaa88e0e8e4da8a6f45c57293ffbc2.setContent(html_c295f3b0b4124ddba49df3193faf1b1c);
+            
+
+            circle_marker_dde681ffe66c4c6d93df8295aa603ed6.bindPopup(popup_eccaa88e0e8e4da8a6f45c57293ffbc2);
+
+            
+        
+    
+
+            var circle_marker_b198c8b9b70d4b55ba7eee2e88390100 = L.circleMarker(
+                [37.72686,15.18769],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_610429337bf449a9bfa400df445b2aeb = L.popup({maxWidth: '300'});
+
+            
+                var html_3958e91f63254c2b8674cf62031935d0 = $('<div id="html_3958e91f63254c2b8674cf62031935d0" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Giarre<br>Lat: 37.72686<br>Lon: 15.18769<br>Temp: 20.79<br>Detection_Time: 2017-06-19 06:03:00<br>Humidity: 68.00<br>Pressure: 1017.00<br>Wind_deg: 290.00<br>Wind_speed: 2.60</font></div>')[0];
+                popup_610429337bf449a9bfa400df445b2aeb.setContent(html_3958e91f63254c2b8674cf62031935d0);
+            
+
+            circle_marker_b198c8b9b70d4b55ba7eee2e88390100.bindPopup(popup_610429337bf449a9bfa400df445b2aeb);
+
+            
+        
+    
+
+            var circle_marker_a7a17c76685343dd8fa6bd767d9e85f9 = L.circleMarker(
+                [38.14756,15.21048],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_a290780f53624d46994a5315eb4041fd = L.popup({maxWidth: '300'});
+
+            
+                var html_2e2d0147931d4ba2b34093552ffb047e = $('<div id="html_2e2d0147931d4ba2b34093552ffb047e" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Barcellona-Pozzo di Gotto<br>Lat: 38.14756<br>Lon: 15.21048<br>Temp: 21.12<br>Detection_Time: 2017-06-19 06:02:29<br>Humidity: 82.00<br>Pressure: 1016.00<br>Wind_deg: 0.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_a290780f53624d46994a5315eb4041fd.setContent(html_2e2d0147931d4ba2b34093552ffb047e);
+            
+
+            circle_marker_a7a17c76685343dd8fa6bd767d9e85f9.bindPopup(popup_a290780f53624d46994a5315eb4041fd);
+
+            
+        
+    
+
+            var circle_marker_d596c838c7a442979b0844610100f47c = L.circleMarker(
+                [38.193272,15.54969],
+                {
+                    color: 'black',
+                    weight: 2,
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .setRadius(30)
+                .addTo(feature_group_1528e08607e6486ebddd400b1d83a6ad);
+            
+    
+            var popup_3406e8920b8f470c944a66d4fc139774 = L.popup({maxWidth: '300'});
+
+            
+                var html_808e140892f94c8fa5cfe2a00433495c = $('<div id="html_808e140892f94c8fa5cfe2a00433495c" style="width: 250.0px; height: 230.0px;"><font face="Verdana" size="3" color="red">Ws: Messina<br>Lat: 38.193272<br>Lon: 15.54969<br>Temp: 21.01<br>Detection_Time: 2017-06-19 06:02:29<br>Humidity: 82.00<br>Pressure: 1016.00<br>Wind_deg: 0.00<br>Wind_speed: 1.50</font></div>')[0];
+                popup_3406e8920b8f470c944a66d4fc139774.setContent(html_808e140892f94c8fa5cfe2a00433495c);
+            
+
+            circle_marker_d596c838c7a442979b0844610100f47c.bindPopup(popup_3406e8920b8f470c944a66d4fc139774);
+
+            
+        
+</script>
