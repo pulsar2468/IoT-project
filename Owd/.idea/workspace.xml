@@ -5,6 +5,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workspacePY/mysite/mysite/db.sqlite3" afterPath="$PROJECT_DIR$/workspacePY/mysite/mysite/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onOpenStreetMap.py" afterPath="$PROJECT_DIR$/onOpenStreetMap.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/owm_test.py" afterPath="$PROJECT_DIR$/owm_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workspacePY/mysite/mysite/mysite/settings.py" afterPath="$PROJECT_DIR$/workspacePY/mysite/mysite/mysite/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workspacePY/mysite/mysite/weather/views.py" afterPath="$PROJECT_DIR$/workspacePY/mysite/mysite/weather/views.py" />
     </list>
@@ -19,7 +21,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Owd$settings.coverage" NAME="settings Coverage Results" MODIFIED="1504267717351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workspacePY/mysite/mysite/mysite" />
-    <SUITE FILE_PATH="coverage/Owd$manage.coverage" NAME="manage Coverage Results" MODIFIED="1504271477698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workspacePY/mysite/mysite" />
+    <SUITE FILE_PATH="coverage/Owd$manage.coverage" NAME="manage Coverage Results" MODIFIED="1504287506562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/workspacePY/mysite/mysite" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,27 +32,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
-                <marker date="1504271457391" expanded="true" signature="632:658" ph="SELECT City.... City" />
-                <marker date="1504271457391" expanded="true" signature="2077:2236" ph="SELECT City.... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="3857:3883" ph="SELECT City.... City" />
-                <marker date="1504271457391" expanded="true" signature="4418:4600" ph="SELECT &quot;miss... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="5203:5353" ph="SELECT &quot;miss... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="5325:5352" ph="SELECT MAX(r... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="5895:6049" ph="SELECT &quot;miss... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="6021:6048" ph="SELECT MAX(r... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="6591:6706" ph="SELECT &quot;miss... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="6678:6705" ph="SELECT MAX(r... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="8405:8499" ph="CREATE TABLE... IF" />
-                <marker date="1504271457391" expanded="true" signature="8650:8844" ph="CREATE TABLE... IF" />
-                <marker date="1504271457391" expanded="true" signature="10692:10873" ph="SELECT &quot;miss... missing_value" />
-                <marker date="1504271457391" expanded="true" signature="12769:12980" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="641:667" ph="SELECT City.... City" />
+                <marker date="1504286285218" expanded="true" signature="2138:2297" ph="SELECT City.... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="3940:3966" ph="SELECT City.... City" />
+                <marker date="1504286285218" expanded="true" signature="4510:4692" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="5304:5454" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="5426:5453" ph="SELECT MAX(r... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="6005:6159" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="6131:6158" ph="SELECT MAX(r... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="6710:6825" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="6797:6824" ph="SELECT MAX(r... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="8533:8627" ph="CREATE TABLE... IF" />
+                <marker date="1504286285218" expanded="true" signature="8778:8955" ph="CREATE TABLE... IF" />
+                <marker date="1504286285218" expanded="true" signature="10805:10986" ph="SELECT &quot;miss... missing_value" />
+                <marker date="1504286285218" expanded="true" signature="12891:13102" ph="SELECT &quot;miss... missing_value" />
               </folding>
             </state>
           </provider>
@@ -126,9 +128,12 @@
       <file leaf-file-name="onOpenStreetMap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/onOpenStreetMap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="990">
+              <caret line="63" column="77" lean-forward="false" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1504285104493" expanded="true" signature="2171:2376" ph="SELECT City.... missing_value" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,17 +148,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="owm_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="owm_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/owm_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="15" />
+            <state relative-caret-position="126">
+              <caret line="159" column="17" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
               <folding>
-                <marker date="1496308488705" expanded="true" signature="4346:4376" ph="SELECT usern... auth_user" />
-                <marker date="1496308488705" expanded="true" signature="4679:4707" ph="SELECT weath... missing_value" />
-                <marker date="1496308488705" expanded="true" signature="4906:4967" ph="SELECT * FRO... missing_value" />
-                <marker date="1496308488705" expanded="true" signature="4941:4964" ph="SELECT MAX(r... missing_value" />
-                <marker date="1496308488705" expanded="true" signature="5403:5446" ph="SELECT lat, City" />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1504286840986" expanded="true" signature="4350:4380" ph="SELECT usern... auth_user" />
+                <marker date="1504286840986" expanded="true" signature="4692:4720" ph="SELECT weath... missing_value" />
+                <marker date="1504286840986" expanded="true" signature="4938:4999" ph="SELECT * FRO... missing_value" />
+                <marker date="1504286840986" expanded="true" signature="4973:4996" ph="SELECT MAX(r... missing_value" />
+                <marker date="1504286840986" expanded="true" signature="5435:5478" ph="SELECT lat, City" />
               </folding>
             </state>
           </provider>
@@ -172,6 +178,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>req</find>
+      <find>print</find>
     </findStrings>
     <dirStrings>
       <dir>/usr/lib/python3.5</dir>
@@ -197,14 +204,14 @@
         <option value="$PROJECT_DIR$/bubble.html" />
         <option value="$PROJECT_DIR$/kml_example.py" />
         <option value="$PROJECT_DIR$/workspacePY/.metadata/.plugins/ts.eclipse.ide.server.nodejs.embed.linux.gtk.x86_64/node-v6.9.4-linux-x64/lib/node_modules/npm/node_modules/node-gyp/gyp/gyptest.py" />
-        <option value="$PROJECT_DIR$/onOpenStreetMap.py" />
-        <option value="$PROJECT_DIR$/owm_test.py" />
         <option value="$PROJECT_DIR$/iFeelBot.py" />
         <option value="$PROJECT_DIR$/hook.py" />
         <option value="$PROJECT_DIR$/ontology_rdfJson.py" />
         <option value="$PROJECT_DIR$/cibernetica.py" />
         <option value="$PROJECT_DIR$/workspacePY/mysite/mysite/mysite/settings.py" />
+        <option value="$PROJECT_DIR$/onOpenStreetMap.py" />
         <option value="$PROJECT_DIR$/workspacePY/mysite/mysite/weather/views.py" />
+        <option value="$PROJECT_DIR$/owm_test.py" />
       </list>
     </option>
   </component>
@@ -235,7 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,6 +336,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -340,6 +347,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -717,13 +725,13 @@
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2306003" sideWeight="0.48705882" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22474378" sideWeight="0.48705882" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.4969743" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3860465" sideWeight="0.50292826" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37209302" sideWeight="0.4795022" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2520064" sideWeight="0.3540091" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37209302" sideWeight="0.5204978" order="11" side_tool="true" content_ui="tabs" x="0" y="285" width="1366" height="221" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28527132" sideWeight="0.5204978" order="11" side_tool="true" content_ui="tabs" x="0" y="285" width="1366" height="221" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26484752" sideWeight="0.5650529" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -973,19 +981,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/templates/weather/home.html">
+    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1674">
-          <caret line="93" column="14" lean-forward="false" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/onOpenStreetMap.py">
+    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -994,42 +1000,6 @@
         <state relative-caret-position="810">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/owm_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="15" />
-          <folding>
-            <marker date="1496308488705" expanded="true" signature="4346:4376" ph="SELECT usern... auth_user" />
-            <marker date="1496308488705" expanded="true" signature="4679:4707" ph="SELECT weath... missing_value" />
-            <marker date="1496308488705" expanded="true" signature="4906:4967" ph="SELECT * FRO... missing_value" />
-            <marker date="1496308488705" expanded="true" signature="4941:4964" ph="SELECT MAX(r... missing_value" />
-            <marker date="1496308488705" expanded="true" signature="5403:5446" ph="SELECT lat, City" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1051,26 +1021,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/templates/weather/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="93" column="14" lean-forward="false" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/workspacePY/mysite/mysite/weather/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="246" column="0" lean-forward="false" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+        <state relative-caret-position="378">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-            <marker date="1504271457391" expanded="true" signature="632:658" ph="SELECT City.... City" />
-            <marker date="1504271457391" expanded="true" signature="2077:2236" ph="SELECT City.... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="3857:3883" ph="SELECT City.... City" />
-            <marker date="1504271457391" expanded="true" signature="4418:4600" ph="SELECT &quot;miss... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="5203:5353" ph="SELECT &quot;miss... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="5325:5352" ph="SELECT MAX(r... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="5895:6049" ph="SELECT &quot;miss... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="6021:6048" ph="SELECT MAX(r... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="6591:6706" ph="SELECT &quot;miss... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="6678:6705" ph="SELECT MAX(r... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="8405:8499" ph="CREATE TABLE... IF" />
-            <marker date="1504271457391" expanded="true" signature="8650:8844" ph="CREATE TABLE... IF" />
-            <marker date="1504271457391" expanded="true" signature="10692:10873" ph="SELECT &quot;miss... missing_value" />
-            <marker date="1504271457391" expanded="true" signature="12769:12980" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="641:667" ph="SELECT City.... City" />
+            <marker date="1504286285218" expanded="true" signature="2138:2297" ph="SELECT City.... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="3940:3966" ph="SELECT City.... City" />
+            <marker date="1504286285218" expanded="true" signature="4510:4692" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="5304:5454" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="5426:5453" ph="SELECT MAX(r... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="6005:6159" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="6131:6158" ph="SELECT MAX(r... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="6710:6825" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="6797:6824" ph="SELECT MAX(r... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="8533:8627" ph="CREATE TABLE... IF" />
+            <marker date="1504286285218" expanded="true" signature="8778:8955" ph="CREATE TABLE... IF" />
+            <marker date="1504286285218" expanded="true" signature="10805:10986" ph="SELECT &quot;miss... missing_value" />
+            <marker date="1504286285218" expanded="true" signature="12891:13102" ph="SELECT &quot;miss... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/onOpenStreetMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="63" column="77" lean-forward="false" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1504285104493" expanded="true" signature="2171:2376" ph="SELECT City.... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/owm_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="159" column="17" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1504286840986" expanded="true" signature="4350:4380" ph="SELECT usern... auth_user" />
+            <marker date="1504286840986" expanded="true" signature="4692:4720" ph="SELECT weath... missing_value" />
+            <marker date="1504286840986" expanded="true" signature="4938:4999" ph="SELECT * FRO... missing_value" />
+            <marker date="1504286840986" expanded="true" signature="4973:4996" ph="SELECT MAX(r... missing_value" />
+            <marker date="1504286840986" expanded="true" signature="5435:5478" ph="SELECT lat, City" />
           </folding>
         </state>
       </provider>

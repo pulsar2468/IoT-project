@@ -142,7 +142,7 @@ def get_value_from_userStations():
     wind_deg = []
     wind_speed = []
     latest_list = []
-    conn = sqlite3.connect('/home/nataraja/Scrivania/OpenData/workspacePY/mysite/mysite/db.sqlite3')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/Owd/workspacePY/mysite/mysite/db.sqlite3')
     c = conn.cursor()
     sql = "SELECT username from auth_user"
     for row in c.execute(sql):
@@ -150,13 +150,14 @@ def get_value_from_userStations():
     context = {'users': latest_list}
     conn.close()
 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     wea=[]
     city=[]
     station=dict()
     for i in context['users']:
         sql = "SELECT weather_id,city FROM %s; "%i
+        print(sql)
         c.execute(sql)
         station['%s'%i] = c.fetchall()
 

@@ -15,7 +15,7 @@ import datetime
 
 def index(request):
     name_city=[]
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql='SELECT City.name FROM City'
     for row in c.execute(sql):
@@ -27,21 +27,21 @@ def index(request):
 
 def real_time(request):
     if request.user.is_authenticated():
-        sys.path.insert(0, "/home/nataraja/Scrivania/OpenData")
+        sys.path.insert(0, "/home/nataraja/Scrivania/progetto/Owd")
         import onOpenStreetMap
         onOpenStreetMap.real_time(1)
-        HtmlFile = open('/home/nataraja/Scrivania/OpenData/workspacePY/real_timeMap.html', 'r', encoding='utf-8')
-        source_code = HtmlFile.read() 
+        HtmlFile = open('/home/nataraja/Scrivania/progetto/Owd/workspacePY/mysite/mysite/real_timeMap.html', 'r', encoding='utf-8')
+        source_code = HtmlFile.read()
         return HttpResponse(source_code)
     else:
             return HttpResponse("Before, you have to log in!")
         
 def real_time_from_UserStations(request):
     if request.user.is_authenticated():
-        sys.path.insert(0, "/home/nataraja/Scrivania/OpenData")
+        sys.path.insert(0, "/home/nataraja/Scrivania/progetto/Owd")
         import onOpenStreetMap
         onOpenStreetMap.real_time(0)
-        HtmlFile = open('/home/nataraja/Scrivania/OpenData/workspacePY/real_timeMap.html', 'r', encoding='utf-8')
+        HtmlFile = open('/home/nataraja/Scrivania/progetto/Owd/workspacePY/mysite/mysite/real_timeMap.html', 'r', encoding='utf-8')
         source_code = HtmlFile.read() 
         return HttpResponse(source_code)
     else:
@@ -51,7 +51,7 @@ def real_time_from_UserStations(request):
 def history(request):
     response=request.GET.get('name', '') #parameters name=city, otherwise null
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT City.id,"%s".name,"%s".detection_time,'\
     'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed '\
@@ -67,12 +67,12 @@ def history(request):
 
 def all_plot(request):
     if request.user.is_authenticated():
-        sys.path.insert(0, "/home/nataraja/Scrivania/OpenData")
+        sys.path.insert(0, "/home/nataraja/Scrivania/progetto/Owd")
         import onOpenStreetMap
         response=request.GET.get('name', '') #parameters name=city, otherwise null
         '''
         latest_list= [] 
-        conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+        conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
         c = conn.cursor()
         sql = 'SELECT City.id,"%s".name,"%s".detection_time,'\
         'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed '\
@@ -96,7 +96,7 @@ def api1_0(request):
 def city_list(request): 
     #response=request.GET.get('name', '') #parameters name=city, otherwise null
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT City.name FROM City'
     for row in c.execute(sql):
@@ -112,7 +112,7 @@ def getSingleData(request):
     dT=request.GET.get('dt','')
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".name,"%s".detection_time,'\
     'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed '\
@@ -130,7 +130,7 @@ def getLastTempData(request):
     name=request.GET.get('name', '') #parameters name=city, otherwise ''
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".name,"%s".detection_time,'\
     '"%s".temp '\
@@ -147,7 +147,7 @@ def getLastHumyData(request):
     name=request.GET.get('name', '') #parameters name=city, otherwise ''
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".name,"%s".detection_time,'\
     '"%s".humidity '\
@@ -164,7 +164,7 @@ def getLastPressure(request):
     name=request.GET.get('name', '') #parameters name=city, otherwise ''
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".detection_time,'\
     '"%s".pressure '\
@@ -210,12 +210,12 @@ def signup_weather(request):
     if request.user.is_authenticated():
         if request.method == 'POST': #after submit in html file, i get data from form and commit object
             mashup=str(request.user)+"_"+str(request.POST.get("weather_id")+"_"+str(request.POST.get("name")))
-            conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+            conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
             c = conn.cursor()
             sql = 'CREATE TABLE IF NOT EXISTS "%s" ("weather_id"  VARCHAR PRIMARY KEY NOT NULL, "city" VARCHAR  ); '\
             'INSERT or IGNORE INTO "%s" VALUES ("%s","%s"); '\
             'INSERT or IGNORE INTO City  VALUES ("%s","%s",%f,%f); '\
-            'CREATE TABLE IF NOT EXISTS  "%s" ("name" VARCHAR , "temp" FLOAT, "humidity" FLOAT, "wind_speed" FLOAT, ' \
+            'CREATE TABLE IF NOT EXISTS  "%s" ("temp" FLOAT, "humidity" FLOAT, "wind_speed" FLOAT, ' \
             '"detection_time" DATETIME PRIMARY KEY, "pressure" FLOAT, "wind_deg" FLOAT);' %(request.user,request.user,request.POST.get("weather_id"),request.POST.get("name"),
                                                                                             request.POST.get("weather_id"),mashup,
                                                                                             float(request.POST.get("latitude")),float(request.POST.get("longitude")),
@@ -236,11 +236,11 @@ def DataFromWs(request):
 
         data=request.GET.get('data', '') #parameters name=...., otherwise ''
         name_board,temperature,humidity=(data.split(','))
-        print(name_board,temperature,humidity)
+        #print(name_board,temperature,humidity)
 
-        conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+        conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
         c = conn.cursor()
-        c.execute("INSERT or IGNORE INTO '%s' VALUES (\"%s\",%f,%f,%f,\"%s\",%f,%f)" % (name_board,"Palermo",float(temperature), float(humidity), 0.0, date,0.0,0.0))
+        c.execute("INSERT or IGNORE INTO '%s' VALUES (%f,%f,%f,\"%s\",%f,%f)" % (name_board,float(temperature), float(humidity), 0.0, date,0.0,0.0))
         conn.commit()
         conn.close()
 
@@ -256,7 +256,7 @@ def historyRDF(request):
     #dT=request.GET.get('dt','')
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".name,"%s".detection_time,'\
     '"%s".temp,"%s".humidity,"%s".wind_speed,"%s".wind_deg, "%s".pressure, City.lat,City.lon '\
@@ -324,7 +324,7 @@ def singleDataRDF(request):
     dT=request.GET.get('dt','')
     #if (dT or name) == null: return HttpResponse('Error params!')
     latest_list= [] 
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT "%s".name,"%s".detection_time,'\
     'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed,"%s".wind_deg, "%s".pressure '\

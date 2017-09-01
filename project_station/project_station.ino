@@ -27,7 +27,7 @@ char HTTP_req[REQ_BUF_SZ] = {0}; // buffered HTTP request stored as null termina
 char req_index = 0; 
 const char* ssid = "test1";
 const char* password = "magic";
-String name_board="shiva_my_station1_Palermo"; //this is important!
+String name_board="davideTaibi_MyHome_Palermo"; //this is important!
 char x[20]="DATA/";
 int g;
 File webFile;

@@ -58,7 +58,7 @@ def schema(response):
     pressure=[]
     wind_deg=[]
     latest_list = []
-    conn = sqlite3.connect('/home/nataraja/Scrivania/db_weather.sqlite')
+    conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
     sql = 'SELECT City.id,''"%s".name,"%s".detection_time,' \
           'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed, "%s".pressure, "%s".wind_deg ' \
