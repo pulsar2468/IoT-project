@@ -216,7 +216,7 @@ def signup_weather(request):
             'INSERT or IGNORE INTO "%s" VALUES ("%s","%s"); '\
             'INSERT or IGNORE INTO City  VALUES ("%s","%s",%f,%f); '\
             'CREATE TABLE IF NOT EXISTS  "%s" ("temp" FLOAT, "humidity" FLOAT, "wind_speed" FLOAT, ' \
-            '"detection_time" DATETIME PRIMARY KEY, "pressure" FLOAT, "wind_deg" FLOAT);' %(request.user,request.user,request.POST.get("weather_id"),request.POST.get("name"),
+            '"detection_time" DATETIME PRIMARY KEY, "pressure" FLOAT, "wind_deg" FLOAT, "a0" FLOAT, "a1" FLOAT , "a2" FLOAT);' %(request.user,request.user,request.POST.get("weather_id"),request.POST.get("name"),
                                                                                             request.POST.get("weather_id"),mashup,
                                                                                             float(request.POST.get("latitude")),float(request.POST.get("longitude")),
                                                                                             mashup)
@@ -240,7 +240,7 @@ def DataFromWs(request):
 
         conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
         c = conn.cursor()
-        c.execute("INSERT or IGNORE INTO '%s' VALUES (%f,%f,%f,\"%s\",%f,%f)" % (name_board,float(temperature), float(humidity), 0.0, date,0.0,0.0))
+        c.execute("INSERT or IGNORE INTO '%s' VALUES (%f,%f,%f,\"%s\",%f,%f,%f,%f,%f)" % (name_board,float(temperature), float(humidity), 0.0, date,0.0,0.0,0.0,0.0,0.0))
         conn.commit()
         conn.close()
 

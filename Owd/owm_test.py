@@ -142,6 +142,9 @@ def get_value_from_userStations():
     wind_deg = []
     wind_speed = []
     latest_list = []
+    a0=[]
+    a1=[]
+    a2=[]
     conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/Owd/workspacePY/mysite/mysite/db.sqlite3')
     c = conn.cursor()
     sql = "SELECT username from auth_user"
@@ -166,23 +169,25 @@ def get_value_from_userStations():
             user_table=(key+"_"+i[0]+"_"+i[1])
             sql = "SELECT * FROM %s WHERE %s.rowid = (SELECT MAX(rowid) FROM %s); " % (user_table,user_table,user_table)
             c.execute(sql)
-            nam,te,hum,w_s,dt,pr,deg  = c.fetchone() or (None,0.0,0.0,0.0,None,0.0,0.0)
-            print(nam,te,hum,w_s,dt,pr,deg)
-            name.append(nam)
+            te,hum,w_s,dt,pr,deg,data0,data1,data2  = c.fetchone() or (0.0,0.0,0.0,None,0.0,0.0,0.0,0.0,0.0)
+            #print(te,hum,w_s,dt,pr,deg)
+            name.append(user_table)
             temp.append(te)
             humidity.append(hum)
             wind_speed.append(w_s)
             t.append(dt)
             pressure.append(pr)
             wind_deg.append(deg)
-
+            a0.append(data0)
+            a1.append(data1)
+            a2.append(data2)
             sql1 = "SELECT lat, lon FROM City WHERE name = '%s';" % user_table
             c.execute(sql1)
             lt, ln = c.fetchone()
             lat.append(float(lt))
             lon.append(float(ln))
 
-    return name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg
+    return name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg,a0,a1,a2
 
 
 #loop to get data

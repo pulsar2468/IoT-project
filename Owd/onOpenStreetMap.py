@@ -9,7 +9,7 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 
 
-def visual(name, lon, lat, pressure, temp, humidity, wind_speed, t,wind_degree):
+def visual(name, lon, lat, pressure, temp, humidity, wind_speed, t,wind_degree,a0,a1,a2):
     map_1 = folium.Map(location=[37.57, 13.92], zoom_start=8, tiles='stamenwatercolor')
     feature_group = folium.FeatureGroup("Locations")
 
@@ -45,8 +45,8 @@ def real_time(who):
         name, lon, lat, pressure, temp, humidity, wind_speed, t, id, wind_deg = owm_test.get_value_from_rectangle()
         visual(name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg)
     else:
-        name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg=owm_test.get_value_from_userStations()
-        visual(name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg)
+        name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg,a0,a1,a2=owm_test.get_value_from_userStations()
+        visual(name, lon, lat, pressure, temp, humidity, wind_speed, t, wind_deg,a0,a1,a2)
 
 
 
@@ -57,24 +57,32 @@ def schema(response):
     hum=[]
     pressure=[]
     wind_deg=[]
+    data0=[]
+    data1=[]
+    data2=[]
     latest_list = []
     conn = sqlite3.connect('/home/nataraja/Scrivania/progetto/db_weather.sqlite')
     c = conn.cursor()
-    sql = 'SELECT City.id,''"%s".name,"%s".detection_time,' \
-          'City.lat,City.lon,"%s".temp,"%s".humidity,"%s".wind_speed, "%s".pressure, "%s".wind_deg ' \
-          'FROM "%s",City WHERE City.name="%s".name' % (
-          response, response, response, response, response, response, response,response,response)
+    sql = 'SELECT ' \
+          '"%s".temp,"%s".humidity,"%s".wind_speed, "%s".detection_time,"%s".pressure, "%s".wind_deg, ' \
+          '"%s".a0,"%s".a1,"%s".a2 ' \
+          'FROM "%s"' % (
+          response, response, response, response, response, response,response,response,response,response)
     for row in c.execute(sql):
         latest_list.append(row)
     conn.close()
 
     for i in range(0, len(latest_list)):
-        dT.append(datetime.datetime.strptime(latest_list[i][2], "%Y-%m-%d %H:%M:%S"))
-        temp.append(latest_list[i][5])
-        hum.append(latest_list[i][6])
-        wind.append(latest_list[i][7])
-        pressure.append(latest_list[i][8])
-        wind_deg.append(latest_list[i][9])
+        dT.append(datetime.datetime.strptime(latest_list[i][3], "%Y-%m-%d %H:%M:%S"))
+        temp.append(latest_list[i][0])
+        hum.append(latest_list[i][1])
+        wind.append(latest_list[i][2])
+        pressure.append(latest_list[i][4])
+        wind_deg.append(latest_list[i][5])
+        data0.append(latest_list[i][6])
+        data1.append(latest_list[i][7])
+        data2.append(latest_list[i][8])
+
 
     #Plot 1
     p1 = figure(width=800, height=400, tools='pan,box_zoom,reset',x_axis_type="datetime")
@@ -134,7 +142,10 @@ def schema(response):
         humidity=hum,
         wind=wind,
         pressure=pressure,
-        wind_deg=wind_deg
+        wind_deg=wind_deg,
+        a0=data0,
+        a1=data1,
+        a2=data2
     )
     source = ColumnDataSource(data)
 
@@ -144,7 +155,11 @@ def schema(response):
         TableColumn(field="humidity", title="Humidity"),
         TableColumn(field="wind", title="Wind_speed m/s"),
         TableColumn(field="pressure", title="Pressure"),
-        TableColumn(field="wind_deg", title="Wind degree")
+        TableColumn(field="wind_deg", title="Wind degree"),
+        TableColumn(field="data0", title="a0"),
+        TableColumn(field="data1", title="a1"),
+        TableColumn(field="data2", title="a2")
+
     ]
     data_table = DataTable(source=source, columns=columns, width=800, height=280)
 
